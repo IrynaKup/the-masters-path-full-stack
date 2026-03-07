@@ -100,7 +100,7 @@ function interactiveSort() {
                         commands[command](numbers);
                     }
                 } else {
-                    console.log('❌ Invalid command. Use a-f or exit');
+                    console.log('Invalid command. Use a-f or exit');
                 }
                 
                 askCommand(); // Ask for next command
@@ -122,8 +122,7 @@ function interactiveSort() {
             const items = input.trim().split(/\s+/);
             
             if (items.length !== 10) {
-                console.log(`❌ Error: need 10 elements, but got ${items.length}`);
-                console.log('Try again\n');
+                console.log(' Error: need 10 elements, but got ${items.length}');
                 askForData(); // Ask again
                 return;
             }
@@ -131,10 +130,6 @@ function interactiveSort() {
             main(items); // Start processing data
         });
     }
-
-    // Start
     askForData();
 }
-
-// Run the program
 interactiveSort();
